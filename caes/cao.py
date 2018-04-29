@@ -1,6 +1,4 @@
-# coding: utf-8
-
-class Mamifero(object):
+class Mamifero:
     """vertebrados dotados de glândulas mamárias"""
 
 
@@ -27,6 +25,7 @@ class Cao(Mamifero):
         return (isinstance(outro, Cao) and
             self.__dict__ == outro.__dict__)
 
+
 class Pequines(Cao):
     """ O pequinês está normalmente nervoso:
 
@@ -36,12 +35,14 @@ class Pequines(Cao):
     """
     nervoso = True
 
-class GrandeMixin(object):
+
+class GrandeMixin:
     """ Mixin: muda o latido"""
     def latir(self, vezes=1):
         # faz de conta que cães grandes não mudam
         # seu latido quando nervosos
         print(self.nome + ':' + ' Wuff!' * vezes)
+
 
 class Mastiff(GrandeMixin, Cao):
     """ O mastiff late diferente:
@@ -50,6 +51,7 @@ class Mastiff(GrandeMixin, Cao):
          >>> atos.latir()
          Atos: Wuff!
     """
+
 
 class SaoBernardo(GrandeMixin, Cao):
     """O São Bernardo serve conhaque:
