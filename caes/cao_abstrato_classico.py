@@ -1,6 +1,4 @@
-# coding: utf-8
-
-class CaoBase(object):
+class CaoBase:
     qt_patas = 4
     carnivoro = True
     nervoso = False
